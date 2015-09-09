@@ -1,0 +1,32 @@
+clear
+add ann
+print
+hash 0: ann
+add bob
+print
+hash 0:
+hash 1: bob
+hash 2: ann
+add jim
+print
+hash 0:
+hash 1: bob
+hash 2: ann jim
+add joe
+print
+hash 0:
+hash 1:
+hash 2: joe
+hash 3:
+hash 4: bob ann
+hash 5:
+hash 6: jim
+add ned
+print
+hash 0: ned
+hash 1:
+hash 2: joe
+hash 3:
+hash 4: bob ann
+hash 5:
+hash 6: jim

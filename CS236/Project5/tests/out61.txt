@@ -1,0 +1,118 @@
+Dependency Graph
+  Q1: R2
+  Q2: R1
+  Q3: R2
+  R1: R2 R3
+  R2: R1
+  R3: R1 R2
+
+f('3',Z)?
+
+  Postorder Numbers
+    Q1: 4
+    R1: 2
+    R2: 3
+    R3: 1
+
+  Rule Evaluation Order
+    R3
+    R1
+    R2
+
+  Backward Edges
+    R1: R2
+    R3: R1 R2
+
+  Rule Evaluation
+    g(E,F) :- f(E,X),r(X,F)
+    r(A,B) :- f(A,X),g(B,X)
+    f(C,D) :- r(D,C)
+    g(E,F) :- f(E,X),r(X,F)
+    r(A,B) :- f(A,X),g(B,X)
+    f(C,D) :- r(D,C)
+    g(E,F) :- f(E,X),r(X,F)
+    r(A,B) :- f(A,X),g(B,X)
+    f(C,D) :- r(D,C)
+    g(E,F) :- f(E,X),r(X,F)
+    r(A,B) :- f(A,X),g(B,X)
+    f(C,D) :- r(D,C)
+    g(E,F) :- f(E,X),r(X,F)
+    r(A,B) :- f(A,X),g(B,X)
+    f(C,D) :- r(D,C)
+
+f('3',Z)? Yes(4)
+  Z='1'
+  Z='3'
+  Z='4'
+  Z='5'
+
+r(Y,'3')?
+
+  Postorder Numbers
+    Q2: 4
+    R1: 3
+    R2: 1
+    R3: 2
+
+  Rule Evaluation Order
+    R2
+    R3
+    R1
+
+  Backward Edges
+    R2: R1
+    R3: R1
+
+  Rule Evaluation
+    f(C,D) :- r(D,C)
+    g(E,F) :- f(E,X),r(X,F)
+    r(A,B) :- f(A,X),g(B,X)
+
+r(Y,'3')? Yes(4)
+  Y='1'
+  Y='3'
+  Y='4'
+  Y='5'
+
+f(W,X)?
+
+  Postorder Numbers
+    Q3: 4
+    R1: 2
+    R2: 3
+    R3: 1
+
+  Rule Evaluation Order
+    R3
+    R1
+    R2
+
+  Backward Edges
+    R1: R2
+    R3: R1 R2
+
+  Rule Evaluation
+    g(E,F) :- f(E,X),r(X,F)
+    r(A,B) :- f(A,X),g(B,X)
+    f(C,D) :- r(D,C)
+
+f(W,X)? Yes(18)
+  W='1', X='1'
+  W='1', X='2'
+  W='1', X='3'
+  W='1', X='4'
+  W='1', X='5'
+  W='3', X='1'
+  W='3', X='3'
+  W='3', X='4'
+  W='3', X='5'
+  W='4', X='1'
+  W='4', X='3'
+  W='4', X='4'
+  W='4', X='5'
+  W='5', X='1'
+  W='5', X='2'
+  W='5', X='3'
+  W='5', X='4'
+  W='5', X='5'
+

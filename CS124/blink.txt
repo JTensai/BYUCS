@@ -1,0 +1,4 @@
+// Fri Dec 18 12:18:52 2009
+Clock->WE
+XQ->LED1
+XQn->WD

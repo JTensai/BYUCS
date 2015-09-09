@@ -1,0 +1,7 @@
+clear
+add 11
+add 12
+add 18
+print
+add 19
+print

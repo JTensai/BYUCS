@@ -1,0 +1,54 @@
+User{
+  first_name:string
+  last_name:string
+  username:string
+  password:string
+  email:string
+  indexed_records:int
+
+  Layout{
+    main_x:int
+    main_y:int
+    left_x:int
+    left_y:int
+    right_x:int
+    right_y:int
+    open_file:string
+  }
+}
+
+Projects{
+  title:string
+  records_per_image:int
+  first_y_coord:int
+  record_height:int
+
+  Fields{
+    field1_id:int
+    field2_id:int
+    field3_id:int
+  }
+  Images{
+
+  }
+}
+
+Field{  
+  title:string
+  xcoord:int
+  width:int
+  help_html:string
+  known_data:string
+}
+
+Image{
+  file:string
+  Records{
+    record1_id:int
+    record2_id:int
+  }
+}
+
+Record{
+  
+}

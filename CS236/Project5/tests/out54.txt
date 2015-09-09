@@ -1,0 +1,27 @@
+Dependency Graph
+  Q1: R1 R2
+  R1:
+  R2:
+
+bob(x)?
+
+  Postorder Numbers
+    Q1: 3
+    R1: 1
+    R2: 2
+
+  Rule Evaluation Order
+    R1
+    R2
+
+  Backward Edges
+
+  Rule Evaluation
+    bob(x) :- jim(x)
+    bob(x) :- joe(x)
+
+bob(x)? Yes(3)
+  x='1'
+  x='2'
+  x='4'
+

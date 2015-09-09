@@ -1,0 +1,18 @@
+clear
+add bob
+add joe
+add jim
+print
+hash 0: joe
+hash 1: bob
+hash 2: jim
+remove bob
+print
+hash 0: joe
+hash 1:
+hash 2: jim
+remove joe
+print
+hash 0: jim
+remove jim
+print

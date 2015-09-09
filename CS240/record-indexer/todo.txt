@@ -1,0 +1,3 @@
+Fix the DAO files to the parameters passed in actually make some sense
+
+Need to make serverfacades to open connections to the database

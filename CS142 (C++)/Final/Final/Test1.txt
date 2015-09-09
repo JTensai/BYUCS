@@ -1,0 +1,31 @@
+Opening Accounts:
+Checking -1 Iris false
+Checking 1000 Paul true
+Checking+ -1 Sydney false
+Checking+ 350 Adam true
+Checking++ 700 Emily false
+Checking++ 1200 MichaelFrampton true
+Saving 40 Dantley true
+Saving+ 3000 Jason true
+Saving+ 200 Kevin false
+CD 400 Andrea true
+Size: 6
+Testing Transactions:
+writeCheck 1 1200 false
+getCurrentBalance 1 995
+advanceMonth 1
+getCurrentBalance 1 989
+writeCheck 1 300 true
+getCurrentBalance 1 689
+deposit 1 200
+getCurrentBalance 1 889
+withdrawFromSavings 5 1000 true
+getCurrentBalance 5 2003
+End
+Closing Accounts:
+close 34 false
+close 4 true
+close 5 true
+close 1000 false
+Size: 4
+

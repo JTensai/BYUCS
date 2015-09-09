@@ -1,0 +1,28 @@
+Schemes:
+  childOf(X,Y)
+  parentOf(X,Y)
+  grandchildOf(X,Y,Z)
+  childOfBea(X)
+  parentOfNed(X)
+
+Facts:
+  childOf('Tim','Bea').
+  childOf('Jill','Ned').
+  childOf('Ned','Bea').
+
+Rules:
+  parentOf(P,C):-childOf(C,P).
+  grandchildOf(C,P,GP):-childOf(C,P),childOf(P,GP).
+  childOfBea(C):-childOf(C,'Bea').
+  parentOfNed(P):-childOf('Ned',P).
+
+Queries:
+  childOf(Child,Parent)?
+
+  parentOf(Parent,Child)?
+  grandchildOf(C,P,GP)?
+
+  childOfBea(C)?
+  parentOfNed(P)?
+
+  childOf(X,'Ned')?

@@ -1,0 +1,5 @@
+clear
+add 24
+add 14
+add 44
+print

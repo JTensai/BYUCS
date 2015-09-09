@@ -1,0 +1,21 @@
+Dick B. Smith
+529173860
+(312) 000-1000
+879 Maple Road, Centralia, Colorado 24222
+Harry C. Anderson
+925173870
+(660) 050-2200
+635 Main Drive, Midville, California 48444
+
+529173860    C+    BOT282
+529173860    A    CHEM134
+529173860    B    HIS431
+529173860    C    HIS477
+925173870    B    BOT180
+925173870    A-    BOT580
+925173870    A    ME305
+925173870    E    ME527
+925173870    D+    PE273
+
+529173860    2.85    Dick B. Smith
+925173870    2.42    Harry C. Anderson

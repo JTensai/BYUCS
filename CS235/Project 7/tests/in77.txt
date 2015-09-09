@@ -1,0 +1,5 @@
+clear
+add enigma
+add epiphany
+add tautology
+print

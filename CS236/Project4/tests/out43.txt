@@ -1,0 +1,20 @@
+Converged after 2 passes through the Rules.
+childOf(Child,Parent)? Yes(3)
+  Child='Jill', Parent='Ned'
+  Child='Ned', Parent='Bea'
+  Child='Tim', Parent='Bea'
+parentOf(Parent,Child)? Yes(3)
+  Parent='Bea', Child='Ned'
+  Parent='Bea', Child='Tim'
+  Parent='Ned', Child='Jill'
+grandchildOf(C,P,GP)? Yes(1)
+  C='Jill', P='Ned'
+  C='Ned', P='Bea'
+  C='Tim', P='Bea'
+childOfBea(C)? Yes(2)
+  C='Ned'
+  C='Tim'
+parentOfNed(P)? Yes(1)
+  P='Bea'
+childOf(X,'Ned')? Yes(1)
+  X='Jill'

@@ -1,0 +1,22 @@
+﻿Build started 10/16/2013 3:52:42 PM.
+     1>Project "F:\CS 142 (C++)\Midterm 1\Midterm 1\Midterm 1.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Midterm 1.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>f:\cs 142 (c++)\midterm 1\midterm 1\main.cpp(162): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\CS 142 (C++)\Midterm 1\Debug\Midterm 1.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Midterm 1.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\CS 142 (C++)\Midterm 1\Debug\Midterm 1.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\CS 142 (C++)\Midterm 1\Debug\Midterm 1.lib" /MACHINE:X86 Debug\main.obj
+         LINK : F:\CS 142 (C++)\Midterm 1\Debug\Midterm 1.exe not found or not built by the last incremental link; performing full link
+         Midterm 1.vcxproj -> F:\CS 142 (C++)\Midterm 1\Debug\Midterm 1.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"F:\CS 142 (C++)\Midterm 1\Debug\Midterm 1.exe;#1" /manifest "Debug\Midterm 1.exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         Deleting file "Debug\Midterm 1.unsuccessfulbuild".
+         Touching "Debug\Midterm 1.lastbuildstate".
+     1>Done Building Project "F:\CS 142 (C++)\Midterm 1\Midterm 1\Midterm 1.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.39

@@ -1,0 +1,8 @@
+clear
+add 24
+add 14
+add 44
+print
+hash 0: 24
+hash 1:
+hash 2: 14 44

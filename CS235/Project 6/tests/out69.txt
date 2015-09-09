@@ -1,0 +1,7 @@
+clear
+add 4
+add 1
+add 2
+print
+level 0: 2(2)
+level 1: 1(1) 4(1)

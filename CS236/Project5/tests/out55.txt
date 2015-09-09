@@ -1,0 +1,17 @@
+Dependency Graph
+  Q1:
+
+bob(x)?
+
+  Postorder Numbers
+    Q1: 1
+
+  Rule Evaluation Order
+
+  Backward Edges
+
+  Rule Evaluation
+
+bob(x)? Yes(1)
+  x='1'
+

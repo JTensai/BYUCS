@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>PHP Form Processing</title>
+    <style>
+      div{width: 300px; height: 35px;}
+      .int_input{float: right; margin-left: 20px;}
+      #response{font-weight: bold; text-align: center;}
+    </style>
+    <script type="text/javascript">
+      function useJava() {
+        if (validate()) {
+          first = parseInt(document.getElementById("int1").value);
+          second= parseInt(document.getElementById("int2").value);
+          sum = 0;
+          for (i = first; i <= second; i++){
+            if ( i % 2){
+              sum = sum + i;
+            }
+          }
+          document.getElementById("response").innerHTML = "JavaScript answer is: " + sum;
+        }
+      }
+
+      function isInt(given_int) {
+        //Check if given_int is a number      
+        if (Number(given_int) === parseInt(given_int)){  
+          //Check if given_int is an integer      
+          if (given_int % 1 === 0 || given_int === 0){
+            return true;
+          }
+        }
+        return false;
+      }
+
+      function validate() {
+        first = document.getElementById("int1").value;
+        second = document.getElementById("int2").value;
+        // Check to make sure inputs are integers
+        if (isInt(first) && isInt(second)){
+          // Check to make sure second int is larger than first int
+          if (first > second){          
+            alert("First Integer must be smaller than the Second");
+            return false;
+          }
+          return true;
+        }
+        else {
+          alert("Both values must be integers"); 
+          return false;         
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Sum of odd number within a given range</h1>
+    <form action="compute.php" onsubmit="return validate()" method="get">
+      <div style="text-align:right;">
+        First Integer: <input type="text" name="int1" id="int1" class="int_input"/>
+      </div>
+      <div style="text-align:right;">
+        Second Integer: <input type="text" name="int2" id="int2" class="int_input"/>
+      </div>
+      <div style="text-align:center;">
+        <input type="submit" value="Use PHP"/>
+        <input type="button" onclick="useJava()" value="Use Javascript"/>
+      </div>
+    </form>
+    <div id="response"></div>
+  </body>
+</html>

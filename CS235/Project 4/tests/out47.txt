@@ -1,0 +1,28 @@
+Selection Sort
+size: 4    compares: 6
+size: 8    compares: 28
+size: 16    compares: 120
+Insertion Sort
+size: 4    compares: 6
+size: 8    compares: 28
+size: 16    compares: 120
+std::sort
+size: 4    compares: 3
+size: 8    compares: 7
+size: 16    compares: 15
+std::list.sort
+size: 4    compares: 4
+size: 8    compares: 12
+size: 16    compares: 32
+Linear Search
+size: 4    compares: 4
+size: 8    compares: 6
+size: 16    compares: 9
+std::find
+size: 4    compares: 4
+size: 8    compares: 6
+size: 16    compares: 9
+std::set.find
+size: 4    compares: 4
+size: 8    compares: 4
+size: 16    compares: 5

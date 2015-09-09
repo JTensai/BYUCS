@@ -1,0 +1,17 @@
+clear
+add 11
+add 12
+add 18
+print
+hash 0: 12 18
+hash 1:
+hash 2: 11
+add 19
+print
+hash 0: 18 11
+hash 1: 12 19
+hash 2:
+hash 3:
+hash 4:
+hash 5:
+hash 6:

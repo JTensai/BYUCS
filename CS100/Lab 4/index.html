@@ -1,0 +1,136 @@
+<html>
+<head>
+  <title>Jordan Taylor</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+  <script>
+  function form_actions() {
+    var name = document.getElementById("name").value;
+    var message;
+    if (name == ""){
+      message = "You must at least give me a language name! ";
+    } else {
+      message = "Ah, yes, that one... ";
+    }
+
+    var radios = document.getElementsByName("info");
+    var response;
+    if (radios[0].checked){
+      response = "Why of course I have heard of it... Who hasn't...";
+    } else if (radios[1].checked) {
+      response = "I am an expert of that language...";
+    } else{
+      response = "Afraid to even ask me about it huh?";
+    }
+    message = message + response;
+    document.getElementById("response").innerHTML = message;
+
+  }
+  </script>
+
+</head>
+<body>
+  <div id="page">
+    <div id="header">
+      <h1 id="page_title">Jordan Taylor</h1>  
+      <h4 id="position_title">Web Programmer/Gamer at Heart</h4>
+      <div id="menu_container">
+        <ul id="menu">
+          <li><a class="menu_item selected" href="index.html">Home</a></li>
+          <li><a class="menu_item" href="experience.html">Experience</a></li>
+          <li><a class="menu_item" href="education.html">Education</a></li>
+          <li><a class="menu_item" href="interests.html">Interests</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+
+      <div id="side_menu_container">
+        <ul id="side_menu">
+          <li><a class="side_menu_item" href="#about_me">About Me</a></li>
+          <li><a class="side_menu_item" href="#places">Places I Lived</a></li>
+          <li><a class="side_menu_item" href="#coding">Coding</a></li>
+        </ul>
+      </div>
+
+
+      <div id="picture_box">
+        <img class="image" src="https://lh3.googleusercontent.com/-7fWOLgLb9Ho/UsIBjAf_AII/AAAAAAACO0U/f979fNiKD-I/s256-no/207ec34e-682f-4e18-9c62-361249a63bc7">
+        <a class="button" href="resume.pdf"> View Resume </a>
+      </div>
+      <div class="infobox" id="about_me">
+        <h2>About Me</h2>
+        <p>I enjoy spending time with my wife, Nasa, more than anything else. I also enjoy working with computers, whether it be gaming, watching movies or TV Shows and I quite enjoy programming.</p>
+        <h2>Programming History</h2>
+        <p>I first learned computer programming at BYU in my Freshman year in 2008. I was taught Java, by Professor Burton. This past fall I had to retake the class because the language was changed to C++. I have quite a bit of web coding experience, mostly using Ruby on Rails.</p>
+      </div>
+
+      <div id="languages_form">
+        <div id="name-field">
+          Ask me about a computer language.<br>
+          <input type="text" id="name">
+        </div>
+        <div id="radios-field">
+          <input type="radio" name="info">Have you ever heard of this language?
+          <br>
+          <input type="radio" name="info">Any experience prgramming in this language?
+        </div>
+        <button id="form_button" onclick="form_actions()">Ask</button>
+        <div id="response"></div>
+      </div>
+
+
+      <div class="infobox" id="places">
+        <h2>Places I have Lived</h2>
+        <table>
+          <tr>
+            <th>Year</th>
+            <th>Location</th>
+          </tr>
+          <tr>
+            <td>1990-2008</td>
+            <td>California</td>
+          </tr>
+          <tr>
+            <td>2008-2009</td>
+            <td>Utah</td>
+          </tr>
+          <tr>
+            <td>2009-2011</td>
+            <td>Poland</td>
+          </tr>
+          <tr>
+            <td>2011-2012</td>
+            <td>California</td>
+          </tr>
+          <tr>
+            <td>2012</td>
+            <td>Poland</td>
+          </tr>
+          <tr>
+            <td>2012-2013</td>
+            <td>California</td>
+          </tr>
+          <tr>
+            <td>2013-2014</td>
+            <td>Utah</td>
+          </tr>
+
+        </table>
+      </div>
+
+      <div class="infobox" id="coding">
+        <h2>Favorite Coding Languages</h2>
+        <ul>
+          <li>Ruby</li>
+          <li>jQuery</li>
+          <li>C++</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

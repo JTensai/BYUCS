@@ -1,0 +1,6 @@
+clear
+add 14
+add 44
+print
+find 14
+find 44

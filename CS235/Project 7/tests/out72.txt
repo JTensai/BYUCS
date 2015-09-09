@@ -1,0 +1,9 @@
+clear
+add bob
+add bob
+add joe
+add jim
+print
+hash 0: joe
+hash 1: bob
+hash 2: jim

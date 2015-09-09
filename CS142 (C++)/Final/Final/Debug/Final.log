@@ -1,0 +1,17 @@
+﻿Build started 12/19/2013 10:32:19 PM.
+     1>Project "F:\CS 142 (C++)\Final\Final\Final.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Final.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         Final.vcxproj -> F:\CS 142 (C++)\Final\Debug\Final.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\Final.unsuccessfulbuild".
+         Touching "Debug\Final.lastbuildstate".
+     1>Done Building Project "F:\CS 142 (C++)\Final\Final\Final.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.45

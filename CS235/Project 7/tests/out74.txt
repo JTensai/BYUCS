@@ -1,0 +1,7 @@
+clear
+add bob
+print
+hash 0: bob
+remove zed
+print
+hash 0: bob

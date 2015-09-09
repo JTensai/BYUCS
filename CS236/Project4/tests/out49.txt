@@ -1,0 +1,2 @@
+Converged after 10 passes through the Rules.
+j('a')? Yes(1)

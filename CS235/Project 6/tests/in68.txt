@@ -1,0 +1,9 @@
+clear
+add 4
+add 2
+add 5
+add 1
+add 3
+print
+remove 4
+print

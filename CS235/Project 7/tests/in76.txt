@@ -1,0 +1,5 @@
+clear
+add bob
+print
+add bob
+print

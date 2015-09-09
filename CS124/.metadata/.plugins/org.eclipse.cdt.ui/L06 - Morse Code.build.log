@@ -1,0 +1,36 @@
+
+**** Build of configuration Debug for project L06 - Morse Code ****
+
+C:\ti\ccsv5\utils\bin\gmake -k all 
+'Building file: ../morse.asm'
+'Invoking: MSP430 Compiler'
+"C:/ti/ccsv5/tools/compiler/msp430_4.1.0/bin/cl430" -vmsp --abi=coffabi -g --include_path="C:/ti/ccsv5/ccs_base/msp430/include" --include_path="C:/ti/ccsv5/tools/compiler/msp430_4.1.0/include" --advice:power=all --define=__MSP430F2274__ --diag_warning=225 --display_error_number --printf_support=minimal --preproc_with_compile --preproc_dependency="morse.pp"  "../morse.asm"
+'Finished building: ../morse.asm'
+' '
+'Building target: L06 - Morse Code.out'
+'Invoking: MSP430 Linker'
+"C:/ti/ccsv5/tools/compiler/msp430_4.1.0/bin/cl430" -vmsp --abi=coffabi -g --advice:power=all --define=__MSP430F2274__ --diag_warning=225 --display_error_number --printf_support=minimal -z --stack_size=80 -m"L06 - Morse Code.map" --heap_size=80 -i"C:/ti/ccsv5/ccs_base/msp430/include" -i"C:/ti/ccsv5/tools/compiler/msp430_4.1.0/lib" -i"C:/ti/ccsv5/tools/compiler/msp430_4.1.0/include" --reread_libs --warn_sections --display_error_number -o "L06 - Morse Code.out"  "./morse_codes.obj" "./morse.obj" "../lnk_msp430f2274.cmd" 
+<Linking>
+"../lnk_msp430f2274.cmd", line 80: warning #10374-D: Interrupt vector "PORT2"
+   does not have an interrupt handler routine.
+"../lnk_msp430f2274.cmd", line 82: warning #10374-D: Interrupt vector "ADC10"
+   does not have an interrupt handler routine.
+"../lnk_msp430f2274.cmd", line 83: warning #10374-D: Interrupt vector
+   "USCIAB0TX" does not have an interrupt handler routine.
+"../lnk_msp430f2274.cmd", line 84: warning #10374-D: Interrupt vector
+   "USCIAB0RX" does not have an interrupt handler routine.
+"../lnk_msp430f2274.cmd", line 85: warning #10374-D: Interrupt vector "TIMERA1"
+   does not have an interrupt handler routine.
+"../lnk_msp430f2274.cmd", line 86: warning #10374-D: Interrupt vector "TIMERA0"
+   does not have an interrupt handler routine.
+"../lnk_msp430f2274.cmd", line 89: warning #10374-D: Interrupt vector "TIMERB1"
+   does not have an interrupt handler routine.
+'Finished building target: L06 - Morse Code.out'
+"../lnk_msp430f2274.cmd", line 90: warning #10374-D: Interrupt vector "TIMERB0"
+   does not have an interrupt handler routine.
+"../lnk_msp430f2274.cmd", line 91: warning #10374-D: Interrupt vector "NMI"
+   does not have an interrupt handler routine.
+warning #10202-D: no suitable entry-point found; setting to 0
+' '
+
+**** Build Finished ****

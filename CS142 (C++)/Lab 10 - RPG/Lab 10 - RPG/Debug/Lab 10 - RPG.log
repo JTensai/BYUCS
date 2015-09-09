@@ -1,0 +1,23 @@
+﻿Build started 12/5/2013 7:57:17 PM.
+     1>Project "F:\CS 142 (C++)\Lab 10 - RPG\Lab 10 - RPG\Lab 10 - RPG.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\Lab 10 - RPG.unsuccessfulbuild".
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Arena.cpp
+         Arena.cpp
+     1>f:\cs 142 (c++)\lab 10 - rpg\lab 10 - rpg\arena.cpp(51): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\cs 142 (c++)\lab 10 - rpg\lab 10 - rpg\arena.cpp(79): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\cs 142 (c++)\lab 10 - rpg\lab 10 - rpg\arena.cpp(103): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\CS 142 (C++)\Lab 10 - RPG\Debug\Lab 10 - RPG.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Lab 10 - RPG.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\CS 142 (C++)\Lab 10 - RPG\Debug\Lab 10 - RPG.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\CS 142 (C++)\Lab 10 - RPG\Debug\Lab 10 - RPG.lib" /MACHINE:X86 Debug\Archer.obj
+         Debug\Arena.obj
+         Debug\Cleric.obj
+         Debug\Factory.obj
+         Debug\Fighter.obj
+         Debug\Robot.obj
+     1>LINK : fatal error LNK1561: entry point must be defined
+     1>Done Building Project "F:\CS 142 (C++)\Lab 10 - RPG\Lab 10 - RPG\Lab 10 - RPG.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.54

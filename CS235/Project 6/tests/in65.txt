@@ -1,0 +1,8 @@
+clear
+add bob
+add joe
+add jim
+print
+find bob
+find joe
+find jim

@@ -1,0 +1,9 @@
+clear
+add 14
+add 44
+print
+hash 0:
+hash 1:
+hash 2: 14 44
+find 14 true
+find 44 true

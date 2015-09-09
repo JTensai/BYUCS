@@ -1,0 +1,18 @@
+Schemes:
+   cdh(C,D,H)
+   tthCourses(C)
+ 
+Facts:
+   cdh('CS101','Tu','10AM').
+   cdh('EE200','M','10AM').
+   cdh('EE200','W','1PM').
+   cdh('EE200','F','10AM').
+   cdh('PH100','Th','11AM').
+ 
+Rules:
+   tthCourses(C) :- cdh(C,'Tu',H).
+   tthCourses(C) :- cdh(C,'Th',H).
+ 
+Queries:
+   cdh('EE200',Day,Hour)?
+   tthCourses(C)?

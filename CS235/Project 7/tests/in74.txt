@@ -1,0 +1,5 @@
+clear
+add bob
+print
+remove zed
+print

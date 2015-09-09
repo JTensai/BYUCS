@@ -1,0 +1,10 @@
+a: 3 7
+d: 3 3 7
+debugging: 1
+live: 5
+long: 5
+process: 2 6
+programming: 4
+putting: 6
+queen: 5
+removing: 2

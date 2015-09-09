@@ -1,0 +1,11 @@
+clear
+add ann
+print
+add bob
+print
+add jim
+print
+add joe
+print
+add ned
+print
