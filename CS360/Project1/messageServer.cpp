@@ -63,12 +63,14 @@ int open_socket(string host, int port, struct sockaddr_in &server_addr){
 string read_put(int length, int client){
   string data = cache;
   while (data.size() < length){
+    // cout << data.size() << " >? " << length << endl;
     int d = recv(client,buf,buflen,0);
     if (d < 0)
       return "";
-    data += string(buf);
+    data.append(buf,d);
+    // cout << data;
   }
-  // cout << data.size() << " > " << length << endl;
+  // cout << "Finally have the full message, Here it is: \n\n\n" << data << "\n\n-----END----\n\n\n\n";
   if (data.size() > length){
     cache = data.substr(length);
     // cout << "read_put cache: " << cache;
@@ -141,6 +143,7 @@ string create_read_result(string name, int index){
 string create_response(string message, int client){
   vector<string> tokens;
   stringstream ss;
+  // cout << "Creating response based on: " << message << endl;
   for(char c : message){
     if (c == ' '){
       tokens.push_back(ss.str());
@@ -166,9 +169,10 @@ string create_response(string message, int client){
     if (tokens.size() == 4){
       string name = tokens[1];
       string subject = tokens[2];
-      int length = atoi(tokens[3].c_str());
-      
+      int length = stoi(tokens[3]);
+      // cout << "----------" << length << "-----------" << endl;
       string message = read_put(length, client);
+      // cout << "MESSAGE: " << message << endl;
       if (message == ""){
         return "error could not read entire message";
       }
@@ -239,6 +243,8 @@ string get_request(int client, int& nread) {
     string request = receieved.substr(0, index+1);
     cache = receieved.substr(index+1);
 
+    // cout << "REMAINING CACHE AFTER REQUEST: " << cache << ":" << endl;
+    // cout << receieved << endl;
 
     return request;
 }

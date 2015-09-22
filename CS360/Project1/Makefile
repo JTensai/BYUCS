@@ -1,25 +1,23 @@
 # Makefile for echo client and server
 
-CXX=			g++ $(CCFLAGS)
+CXX=			g++ -std=c++11 $(CCFLAGS)
 
-SERVER =		messageServer.o
-CLIENT =		messageClient.o
+SERVER =		messageServer
+CLIENT =		messageClient
 OBJS =			$(SERVER) $(CLIENT)
-
-LIBS=
 
 CCFLAGS= -g
 
-all:	messageServer messageClient
+all:	$(SERVER) $(CLIENT)
 
-messageServer:$(SERVER)
-		$(CXX) -o messageServer $(SERVER) $(LIBS)
+$(SERVER):$(SERVER).cpp
+	$(CXX) -o $(SERVER) $(SERVER).cpp
 
-messageClient:$(CLIENT)
-		$(CXX) -o messageClient $(CLENT) $(LIBS)
+$(CLIENT):$(CLIENT).cpp
+	$(CXX) -o $(CLIENT) $(CLIENT).cpp
 
 clean:
-		rm -f $(OBJS) $(OBJS:.o=.d)
+	rm -f $(OBJS) $(OBJS:.o=.d)
 
 realclean:
-		rm -f $(OBJS) $(OBJS:.o=.d) messageServer messageClient
+	rm -f $(OBJS) $(OBJS:.o=.d) $(SERVER) $(CLIENT)

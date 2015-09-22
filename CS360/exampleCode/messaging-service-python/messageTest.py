@@ -30,7 +30,7 @@ class Tester:
         self.port = options.port
 
     def open_socket(self):
-        print " Setup the socket for the server "
+        """ Setup the socket for the server """
         try:
             self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR,1)
