@@ -20,4 +20,8 @@ clean:
 	rm -f $(OBJS) $(OBJS:.o=.d)
 
 realclean:
+<<<<<<< Updated upstream
 	rm -f $(OBJS) $(OBJS:.o=.d) $(SERVER) $(CLIENT)
+=======
+		rm -f $(OBJS) $(OBJS:.o=.d) messageServer messageClient
+>>>>>>> Stashed changes
