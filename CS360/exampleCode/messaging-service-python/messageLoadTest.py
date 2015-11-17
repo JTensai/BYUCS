@@ -201,13 +201,12 @@ class Tester(threading.Thread):
     def send_list(self,name):
         self.server.sendall("list %s\n" % (name))
         response = self.get_response()
-        # print ":"+self.name+":"
         try:
             fields = response.split()
             if fields[0] != 'list':
                 print "Failed with list:", response
                 return False
-            print "%s listed %d messages" % (self.name,int(fields[1]))
+            # print "%s listed %d messages" % (self.name,int(fields[1]))
             return True
         except:
             print "Failed with list:",response
@@ -234,17 +233,17 @@ class WorkloadGenerator:
         for i in range(num_threads):
             name = "Thread %d" % (i+1)
             self.threads.append(Tester(hostname, port, repetitions, name))
-		
+        
     def run(self):
         """ run the workload generator """
         for thread in self.threads:
             thread.start()
         for thread in self.threads:
-            thread.join(30)
+            thread.join(60)
             if thread.isAlive():
                 print "Waited too long ... aborting"
                 return
-			
+            
 if __name__ == "__main__":
     # parse arguments
 
@@ -260,11 +259,11 @@ if __name__ == "__main__":
 
     parser.add_option("-t", "--threads", dest="threads", type="int",
                       default=10,
-                      help=	"number of busy threads to test")
+                      help= "number of busy threads to test")
 
     parser.add_option("-r", "--repetitions", dest="repetitions", type="int",
                       default=10,
-                      help=	"number of repetitions for each thread")
+                      help= "number of repetitions for each thread")
 
 
     (options,args) = parser.parse_args()

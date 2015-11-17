@@ -24,9 +24,8 @@ class Downloader:
 			self.filename = split[-1]
 		self.thread_count = int(args.number_of_threads)
 
-	def download(self):
-		headers = {'Accept-Encoding': 'identity'}  
-		r = requests.head(self.url, headers=headers)
+	def download(self): 
+		r = requests.head(self.url)
 		try:
 			length = int(r.headers['content-length'])
 			increment = length / self.thread_count
@@ -47,8 +46,8 @@ class Downloader:
 
 				total_time = time.time() - start_time
 				print "%s %d %d %f" % (self.url, self.thread_count, length, total_time)
-		except KeyError:
-			print "Error: No content-length header for given url"
+		except KeyError, e:
+			print "Error: Page redirected and key (" + str(e) + ") was not found in headers"
 
 
 		

@@ -228,4 +228,3 @@ if __name__ == "__main__":
         wg.startTotal(options.total)
     else:
         wg.startDuration(options.duration)
-

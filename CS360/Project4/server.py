@@ -12,7 +12,8 @@ class Server:
         self.host = ""
         self.port = port
         self.conf_path = conf_path
-        self.clients = {}
+        self.clients = {} # {fileno:client}
+        self.client_cache = '' # {fileno:cached_string}
         self.conf_hosts = {}
         self.conf_media = {}
         self.conf_params = {}
@@ -94,7 +95,7 @@ class Server:
                     if self.clients.get(soc) == None:
                         new_idle_sockets.pop(soc)
 
-                    if idle_sockets[soc] > (int(self.conf_params['timeout'])-1):
+                    if idle_sockets[soc] > (int(self.conf_params['timeout'])):
                         self.clients[soc].close()
                         self.clients.pop(soc)
                         new_idle_sockets.pop(soc)
@@ -178,7 +179,6 @@ class Server:
             'Last-Modified': '',
             'Connection': 'Keep-Alive'
         }
-
         # print 'Error: ' + str(request.error_code)
         if str(request.error_code) == 'None':
             if request.command == 'GET':
@@ -221,12 +221,7 @@ class Server:
                         response_body = '<html><body><h1>Error 500 - Internal Server Error</h1></body></html>'
                         response_headers['Content-Length'] = size
             
-            elif request.command == "HEAD":
-                # print request.command
-                response_status = 'HTTP/1.1 501 Not Implemented\r\n'
-                response_body = '<html><body><h1>Error 501 Not Implemented</h1></body></html>'
-                response_headers['Content-Length'] = len(response_body)
-            elif (request.command == 'DELETE') or (request.command == 'PUT') or (request.command == 'POST') or (request.command == 'OPTIONS') or (request.command == 'TRACE') or (request.command == 'CONNECT'):
+            elif (request.command == "HEAD") or (request.command == 'DELETE') or (request.command == 'PUT') or (request.command == 'POST') or (request.command == 'OPTIONS') or (request.command == 'TRACE') or (request.command == 'CONNECT'):
                 # print request.command
                 response_status = 'HTTP/1.1 501 Not Implemented\r\n'
                 response_body = '<html><body><h1>Error 501 Not Implemented</h1></body></html>'
@@ -237,9 +232,17 @@ class Server:
                 response_body = '<html><body><h1>Error 400 - Bad Request</h1></body></html>'
                 response_headers['Content-Length'] = len(response_body)
         elif request.error_code == 400:
-            response_status = 'HTTP/1.1 400 Bad Request\r\n'
-            response_body = '<html><body><h1>Error 400 Bad Request</h1></body></html>'
-            response_headers['Content-Length'] = len(response_body)
+            data = self.client_cache + data # append the new data to anything in the cache
+            request = HTTPRequest(data)
+            if str(request.error_code) == 'None':
+                self.client_cache = ''
+                self.createResponse(data,fd)
+            else:
+                self.client_cache = data
+                return
+            # response_status = 'HTTP/1.1 400 Bad Request\r\n'
+            # response_body = '<html><body><h1>Error 400 Bad Request</h1></body></html>'
+            # response_headers['Content-Length'] = len(response_body)
         elif request.error_code == 501:
             response_status = 'HTTP/1.1 501 Not Implemented\r\n'
             response_body = '<html><body><h1>Error 501 Not Implemented</h1></body></html>'

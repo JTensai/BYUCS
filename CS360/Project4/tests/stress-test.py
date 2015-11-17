@@ -1,7 +1,7 @@
 # 
 # Stress test for web servers
-#	by Brian Sanderson
-#	February 2006
+#   by Brian Sanderson
+#   February 2006
 #
 #   Revised by Daniel Zappala
 #   2007, 2008, 2013
@@ -23,7 +23,7 @@ class RequesterThread(Thread):
         self.uri = uri
         self.duration = duration
         self.identifier = identifier
-		
+        
     def run(self):
         result = True
         error = ''
@@ -60,7 +60,7 @@ class RequesterThread(Thread):
                             if len(buf) > 0:
                                 buflen += len(buf)
                             else:
-                            	error = "(Expected %d bytes got %d bytes)" % (givenlength,buflen)
+                                error = "(Expected %d bytes got %d bytes)" % (givenlength,buflen)
                                 result = False
                                 break
                             if buflen >= givenlength:
@@ -98,7 +98,7 @@ class WorkloadGenerator:
             self.threads.append(RequesterThread(hostname, port, uri, duration, identifier))
             identifier += 1
         self.duration = duration
-		
+        
     def launch_requesters(self):
         for thread in self.threads:
             time.sleep(0.1)
@@ -107,13 +107,13 @@ class WorkloadGenerator:
         print "Waiting for thread termination ..."
         for thread in self.threads:
             thread.join()
-			
+            
 if __name__ == "__main__":
     parser = optparse.OptionParser(usage="%prog hostname[:port]/file -t [threads] -d [duration]", version="%prog 1.0")
     parser.add_option("-t", "--threads", dest="threads", type="int", default=1,
-                      help=	"number of busy threads to test")
+                      help= "number of busy threads to test")
     parser.add_option("-d", "--duration", dest="duration", type="int", default=30,
-                      help=	"duration of test")
+                      help= "duration of test")
     (options, args) = parser.parse_args()
 
     # check for host:port/file
@@ -124,10 +124,10 @@ if __name__ == "__main__":
     hostname = portparts[0]
     uri = '/' + '/'.join(hostparts[1:])
     port = 80
-		
+        
     if (len(portparts) > 1):
         port = int(portparts[1])
-				
+                
     print "Host: %s, Port: %d, URI: %s" % (hostname, port, uri)
     print "Number of concurrently busy threads: %d" % (int(options.threads))
     print "Duration of test:                  : %d sec" % (int(options.duration))
