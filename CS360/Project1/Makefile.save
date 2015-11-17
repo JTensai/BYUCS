@@ -19,5 +19,5 @@ $(CLIENT):$(CLIENT).cpp
 clean:
 	rm -f $(OBJS) $(OBJS:.o=.d)
 
-realclean:
-	rm -f $(OBJS) $(OBJS:.o=.d) $(SERVER) $(CLIENT)
+realclean
+	rm -f $(OBJS) $(OBJS:.o=.d) $(SERVER) $(CLIENT
